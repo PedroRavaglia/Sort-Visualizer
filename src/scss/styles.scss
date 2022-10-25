@@ -1,0 +1,106 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.col span {
+    font-size: 18px;
+}
+
+.sort-name {
+    animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.info {
+    margin-bottom: 150px;
+}
+
+p {
+    text-align: justify;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+.info-container p, td {
+    font-size: 23px;
+}
+
+@media (max-width: 992px) {
+    .info-container p {
+        font-size: 17px; 
+    }
+    .info-container td {
+        font-size: 18px; 
+    }
+    footer p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-container span {
+        font-size: 16px;
+    }
+}
+@media (max-width: 340px) {
+    .slider-container span {
+        font-size: 12px;
+    }
+}
+@media (max-width: 290px) {
+    .slider-container span {
+        font-size: 10px;
+    }
+}
+
+td {
+    white-space:nowrap;
+}
+
+.compl-name {
+    border-right: 2px solid gray;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 2px solid gray;
+}
+
+table:last-child tr:last-child td {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.in-view {
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
