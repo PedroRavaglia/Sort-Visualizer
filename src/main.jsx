@@ -6,8 +6,7 @@ import './scss/styles.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <BrowserRouter basename={"/selectionsort"}> */}
-    <BrowserRouter>
+    <BrowserRouter basename={"/Sort-Visualizer"}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
