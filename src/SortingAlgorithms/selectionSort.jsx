@@ -28,8 +28,7 @@ export default function selectionSort(state, sortedArray, setSortedArray, setBut
             t = colorTransition(sortedArray[i], t, state.dur, colors.selected);
 
             setSortedArray(swap(sortedArray, i, iMin));
-            // t = swapSVG(sortedArray, t, state.dur, state);
-            t = swapSVG(sortedArray, t, state.dur, canvas);
+            t = swapSVG(sortedArray, i, iMin, t, state.dur, canvas);
 
             colorTransition(sortedArray[iMin], t, state.dur, colors.rec);
             t = colorTransition(sortedArray[i], t, state.dur, colors.ordered);

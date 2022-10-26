@@ -1,4 +1,4 @@
-import { colorTransition, swapSVG, swap, ACTIONS, colors, resetColors, drawLine,cleanLine } from '../App'
+import { colorTransition, swapSVG, swap, colors, resetColors, drawLine,cleanLine } from '../App'
 
 function partition(array, low, high, t, state, setSortedArray, canvas) {
 
@@ -22,7 +22,7 @@ function partition(array, low, high, t, state, setSortedArray, canvas) {
         if (array[j] < pivot) {
             i++;
             setSortedArray(swap(array, i, j));
-            t = swapSVG(array, t, state.dur, canvas);
+            t = swapSVG(array, i, j, t, state.dur, canvas);
             t = colorTransition(array[i], t, state.dur, colors.lesser);
             rect_mod.push(array[i]);
         }
@@ -35,7 +35,7 @@ function partition(array, low, high, t, state, setSortedArray, canvas) {
 
     cleanLine(pivot, t);
     setSortedArray(swap(array, i+1, high));
-    t = swapSVG(array, t, 1.5*state.dur, canvas) + state.dur;
+    t = swapSVG(array, i+1, high, t, 1.5*state.dur, canvas) + state.dur;
 
     rect_mod.forEach((d) => {
         colorTransition(d, t, state.dur, colors.rec);

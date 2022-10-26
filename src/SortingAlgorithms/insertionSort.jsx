@@ -18,8 +18,8 @@ export default function insertionSort(state, sortedArray, setSortedArray, setBut
             t = colorTransition(sortedArray[j], t, state.dur, colors.compare);
             colorTransition(sortedArray[j], t, state.dur, colors.ordered);
 
-            setSortedArray(swap(sortedArray, sortedArray.indexOf(key), j));
-            t = swapSVG(sortedArray, t, state.dur, canvas);
+            setSortedArray(swap(sortedArray, j, j+1));
+            t = swapSVG(sortedArray, j, j+1, t, state.dur, canvas);
 
             j--;
         }

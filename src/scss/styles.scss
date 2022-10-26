@@ -4,6 +4,21 @@
     font-size: 18px;
 }
 
+@media (max-width: 768px) {
+    .offcanvas {
+        width: 330px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .offcanvas {
+        width: 240px !important;
+    }
+    .offcanvas-title {
+        font-size: 20px;
+    }
+}
+
 .sort-name {
     animation: 2s anim-lineUp ease-out;
 }

@@ -58,6 +58,6 @@ export const sortData = [
       right side of the structure, the smaller ones to the left, creating two partitions. Next, this procedure gets applied recursively 
       to the two partitions and so on.`
     ], 
-    comp: ["O(n × log n)", "O(n²)", "O(n × log n)", "O(n)"]
+    comp: ["O(n × log n)", "O(n × log n)", "O(n²)", "O(n)"]
   }
 ];

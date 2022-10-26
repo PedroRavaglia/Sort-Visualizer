@@ -1,12 +1,6 @@
 import { colorTransition, swapSVG, swap, colors, resetColors } from "../App";
 
-export default function bubbleSort(
-  state,
-  sortedArray,
-  setSortedArray,
-  setButtonState,
-  canvas
-) {
+export default function bubbleSort(state, sortedArray, setSortedArray, setButtonState, canvas) {
   setButtonState(1);
   resetColors(sortedArray);
 
@@ -24,7 +18,7 @@ export default function bubbleSort(
         setSortedArray(swap(sortedArray, j, j + 1));
         swapped = true;
 
-        t = swapSVG(sortedArray, t, state.dur, canvas);
+        t = swapSVG(sortedArray, j, j + 1, t, state.dur, canvas);
       }
 
       colorTransition(sortedArray[j], t, state.dur, colors.rec);
